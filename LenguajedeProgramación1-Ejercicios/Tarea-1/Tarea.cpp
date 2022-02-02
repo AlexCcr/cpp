@@ -1,5 +1,8 @@
 #include<iostream>
 
+// Tarea  1.
+//Crear un programa que sume, reste, multiplique y divida
+
 using namespace std;
 
 int main(int argc, char const *argv[])
@@ -23,6 +26,6 @@ int main(int argc, char const *argv[])
     cout << "La resta de a - b: " << resta <<endl;
     cout << "La multiplicacion de a * b: " << multiplicacion <<endl;
     cout << "La division de a / b: " << division <<endl;
-    
+
     return 0;
 }
