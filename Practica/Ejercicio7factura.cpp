@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
     double total = 0;
     double imp = 0.15;
 
-    cout<< "Ingrese el subtotal de la factura";
+    cout<< "Ingrese el subtotal de la factura: ";
     cin >> subtotal;
      
     // proceso
