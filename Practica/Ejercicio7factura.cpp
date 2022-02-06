@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
     total = subtotal + (subtotal*imp);
 
     // salida
-    cout <<end;
-    cout << "Total a pagar es: "<<total;
+    cout << endl;
+    cout << "Total a pagar es: " << total;
     return 0;
 }
