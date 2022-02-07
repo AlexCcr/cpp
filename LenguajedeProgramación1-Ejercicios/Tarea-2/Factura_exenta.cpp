@@ -4,7 +4,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    // datos de entrada
+    // variables
     double subtotal = 0;
     double total = 0;
     double imp = 0.15;
@@ -12,6 +12,8 @@ int main(int argc, char const *argv[])
     double calculodescuento = 0;
     double calculoimpuesto = 0;
     char exenta;
+
+    //captura de datos
     cout<< "Ingrese el subtotal de la factura: ";
     cin >> subtotal;
 
@@ -21,17 +23,17 @@ int main(int argc, char const *argv[])
     cout << "Es factura exenta? escriba S o N: ";
     cin >> exenta;
 
-    if(exenta == 'S'){
+    //condicion
+    if(exenta == 'n'|| exenta=='n'){
        calculoimpuesto = (subtotal - calculodescuento)* imp;
     }
     else{
         calculoimpuesto=0;
     }
+
     // proceso 
     calculodescuento = (subtotal * desc)/100;
-    
     total = subtotal - calculodescuento + calculoimpuesto;
-
 
     // salida
     cout << endl;
