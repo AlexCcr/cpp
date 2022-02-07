@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
         else{
             cout << "Tecla incorrecta.";
             cout <<endl;
-            cout << "El siguiente total puede no ser valido";
+            return 0;
         }
     }
 
