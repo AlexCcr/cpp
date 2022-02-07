@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
     cin >> exenta;
 
     //condicion
-    if(exenta == 'n'|| exenta=='n'){
+    if(exenta == 'n'|| exenta=='N'){
        calculoimpuesto = (subtotal - calculodescuento)* imp;
     }
     else{
