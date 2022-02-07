@@ -28,7 +28,12 @@ int main(int argc, char const *argv[])
        calculoimpuesto = (subtotal - calculodescuento)* imp;
     }
     else{
+        if(exenta == 's'|| exenta=='S'){
         calculoimpuesto=0;
+        }
+        else{
+            cout << "Tecla incorrecta.";
+        }
     }
 
     // proceso 
