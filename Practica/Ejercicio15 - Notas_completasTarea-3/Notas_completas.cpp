@@ -71,7 +71,7 @@ if(nota >= 11 && nota <= 15){
 if(nota >= 6 && nota <= 10){
     cout<< "Obtuvo una calificación de F";
 }
-if(nota >=   0 && nota <= 5){
+if(nota >   0 && nota <= 5){
     cout<< "Obtuvo una calificación de F-";
 }
 
