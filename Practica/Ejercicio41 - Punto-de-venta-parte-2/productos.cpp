@@ -2,9 +2,8 @@
 
 using namespace std;
 
-void productos()
+void productos(int opcion)
 {
-    int opcion;
     system ("cls");
 
     switch (opcion)
