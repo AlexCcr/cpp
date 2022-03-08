@@ -23,5 +23,6 @@ void imprimirfactura()
 
     cout << endl;
     cout << "SUBTOTAL: "<<subtotal;
-    
+    cout << endl;
+    system ("pause");
 }
