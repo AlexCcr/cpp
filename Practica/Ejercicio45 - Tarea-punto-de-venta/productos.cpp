@@ -17,7 +17,7 @@ void productos(int opcion)
 			cout << "*****************"<< endl; 
 			cout << "1 - Capuccino"<< endl; 
 			cout << "2 - Expresso"<< endl; 
-			cout << "3 - Expresso"<< endl; 
+			cout << "3 - Moka Caliente"<< endl; 
 			cout << endl;
 			cout << "Ingrese una opcion: ";
 			cin >> opcionProducto;
@@ -31,6 +31,9 @@ void productos(int opcion)
 				
 				case 2:
 					agregarProducto("1 - Expresso 			L 30.00", 1, 30);
+					break;
+				case 3:
+					agregarProducto("1 - Moka Caliente		L 30.00", 1, 30);
 					break;
 				default:
 				{
@@ -106,7 +109,7 @@ void productos(int opcion)
 		            agregarProducto("1 - Flan de Queso		L 35.00", 1, 35);
 		            break;
 		        case 3:
-		        	agregarProducto("1 - Semitas de Arroz	L 12.00", 1, 12);
+		        	agregarProducto("1 - Semita de arroz		L 12.00", 1, 12);
 		        	break;
 		        
 				default:	//defaul de opciones de productos
