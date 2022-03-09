@@ -47,7 +47,7 @@ void productos(int opcion)
 		}
 
         case 2:			// BEBIADAS FRIAS
-        {   
+        {
 			cout << "BEBIDAS FRIAS"<< endl;
             cout << "*************"<< endl;
 			cout << "1 - Caramelo Latte"<< endl; 
@@ -60,14 +60,14 @@ void productos(int opcion)
 			switch(opcionProducto) //opciones de productos
 	    	{
 		        case 1:
-		            agregarProducto("1 - Caramelo Latte L 55.00", 1, 55);
+		            agregarProducto("1 - Cafe Latte	L 55.00", 1, 55);
 		            break;
 		        
 		        case 2:
-		            agregarProducto("1 - Cafe Match L 45.00", 1, 45);
+		            agregarProducto("1 - Cafe Match	L 45.00", 1, 45);
 		            break;
 		        case 3:
-		        	agregarProducto("1 - Granita L 60.00", 1, 60);
+		        	agregarProducto("1 - Granita	L 60.00", 1, 60);
 		        	break;
 		        
 				default:	//defaul de opciones de productos
@@ -77,15 +77,14 @@ void productos(int opcion)
 		            break;
 		        }
 		            
-		    	}
+		    }
 	        cout <<endl;
   			system ("cls");
  		   	cout <<"Producto Agregado"<<endl<<endl;
     		system ("pause");
-
     		break;
         }
-        case 3:			// BEBIADAS FRIAS
+        case 3:			// REPOSTERIA
         {   
 			cout << "REPOSTERIA"<< endl;
             cout << "**********"<< endl;
@@ -116,17 +115,16 @@ void productos(int opcion)
 		            break;
 		        }
 		            
-		    	}
+		    }
 	        cout <<endl;
   			system ("cls");
  		   	cout <<"Producto Agregado"<<endl<<endl;
     		system ("pause");
-
     		break;
         }
 
-    default:
-        break;
+   		default:
+        	break;
     }
 
 }
