@@ -98,14 +98,14 @@ void productos(int opcion)
 			switch(opcionProducto) //opciones de productos
 	    	{
 		        case 1:
-		            agregarProducto("1 - Se�orita L 40.00", 1, 40);
+		            agregarProducto("1 - Senorita	 		L 40.00", 1, 40);
 		            break;
 		        
 		        case 2:
-		            agregarProducto("1 - Flan de Queso L 35.00", 1, 35);
+		            agregarProducto("1 - Flan de Queso		L 35.00", 1, 35);
 		            break;
 		        case 3:
-		        	agregarProducto("1 - Semitas de Arroz L 12.00", 1, 12);
+		        	agregarProducto("1 - Semitas de Arroz	L 12.00", 1, 12);
 		        	break;
 		        
 				default:	//defaul de opciones de productos
