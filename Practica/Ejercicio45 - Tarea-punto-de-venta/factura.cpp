@@ -21,9 +21,9 @@ void imprimirfactura()
     system ("cls");
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     
-    cout << "*******"<< endl;
-    cout << "FACTURA"<< endl;
-    cout << "*******"<< endl <<endl;
+    cout << "\t\t*******"<< endl;
+    cout << "\t\tFACTURA"<< endl;
+    cout << "\t\t*******"<< endl <<endl;
 
     cout <<"PRODUCTOS"<< endl;
     cout << listaProductos;
