@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
@@ -18,7 +19,7 @@ void agregarProducto(string descripcion, int cantidad, double precio)
 void imprimirfactura()
 {
     system ("cls");
-
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     
     cout << "*******"<< endl;
     cout << "FACTURA"<< endl;
@@ -28,14 +29,28 @@ void imprimirfactura()
     cout << listaProductos;
 
     cout << endl;
+    SetConsoleTextAttribute(hConsole, 15);
     cout << "SUBTOTAL: "<<subtotal;
+    cout << " Lempiras";
     cout << endl;
-
+    
     cout << endl;
-    cout << "TOTAL: "<<total;
+    SetConsoleTextAttribute(hConsole, 14);
+    cout << "   TOTAL: "<<total;
+    cout << " Lempiras";
     cout << endl;
     cout << endl;
-    cout << "IMPUESTO SOBRE VENTAS (15%): "<<total;
-    cout << endl;
+    
+    
+}
+void impuesto()
+{
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, 12);
+    cout << "IMPUESTO SOBRE VENTAS (15%): ";
+    SetConsoleTextAttribute(hConsole, 7);
+    cout <<isv;
+    cout << " Lempiras";
+    cout << endl<<endl;
     system ("pause");
 }
