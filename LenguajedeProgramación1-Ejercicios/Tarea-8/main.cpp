@@ -21,5 +21,6 @@ int main ()
 	cin >> numero;
 	
 	cout << "\nLa raiz cuadrada de "<< numero << " es = " << raizcuad(numero) <<endl;
+	system ("pause");
 	return 0;
 }
