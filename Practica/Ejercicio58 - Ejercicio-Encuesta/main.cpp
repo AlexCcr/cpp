@@ -37,7 +37,7 @@ int main(int argc, char const *argv[])
     cout<< "Resumen" <<endl;
     cout<< "Respuesta pregunta 1: "<<respuestas[0]<<endl;
     cout<< "Respuesta pregunta 2: "<<respuestas[1]<<endl;
-    cout<< "Respuesta pregunta 3: "<<respuestas[2]<<endl;
+    cout<< "Respuesta pregunta 3:  "<<respuestas[2]<<endl;
     
 
     return 0;
