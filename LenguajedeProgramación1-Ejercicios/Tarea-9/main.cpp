@@ -13,7 +13,7 @@ int tiraDados( void );
 int main()
 {
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	cout << "\t\tPrograma para jugar con dos dados:"<<endl;
+	cout << "\n\t\tPrograma para jugar con dos dados:"<<endl;
 	cout << "\t\t*********************************"<<endl<<endl<<endl;
 	
 	int resultado;
