@@ -6,12 +6,10 @@
 #include <windows.h>
 #include "menu.h"
 
-
 using namespace std;
 
-string usuariodefault = "Usuario";
-string clavedefault = "1234";
-
+string usuariodefault = "admin";
+string clavedefault = "admin";
 
 string usuario;
 string clave;
@@ -31,7 +29,7 @@ void cambiarLogin ()
     cout << "Ingrese la clave preestablecida: ";
     cin >> clave;
 
-    if(usuario == usuariodefault && clave == clavedefault)
+    if(usuario == usuariodefault && clave == clavedefault )
     {
         //cambiar la clave y contraseña
     
@@ -43,13 +41,11 @@ void cambiarLogin ()
         ofstream archivo2 ("documento.txt");
         archivo2 << usuario + "\n" + clave;
         archivo2.close();
+        system("cls");
         login();
     }
     else
     {
         cout << "Datos incorrectos";
     }
-
-
-
 }

@@ -17,12 +17,9 @@ void menu ()
         cout << "\t\t\t  MENU  \n";
         cout << "\t\t\t********\n\n\n";
 
-        cout << "1 -- Vendedor" << endl;
-        cout << "2 -- Clientes" << endl;
-        cout << "3 -- Productos" << endl;
-        cout << "4 -- Proveedor" << endl;
-        cout << "5 -- Bodega" << endl;
-        cout << "7 -- Factura" << endl;
+        cout << "1 -- Planillas"<<endl;
+        cout << "2 -- Cambiar parametros"<<endl;
+        cout << "3 -- Trabajadores" << endl;
         cout << "0 -- Salir" << endl;
         cout << "Seleccione una opcion: ";
         cin >> opcion;
@@ -34,7 +31,7 @@ void menu ()
             cin >> valor;
             if(valor == 1 )
             {
-                cl = 1;
+                cl = 0;
                 system("cls");
                 break;
             }
@@ -48,10 +45,9 @@ void menu ()
             cout << "digito incorrecto, el programa se cerrara"<<endl;
             break;
         }
-        if (opcion ==4)
+        if (opcion ==3)
         {
-            //imprimirfactura();
-            //impuesto();
+            trabajadores();
         }
         // funcion de los menus productos(opcion);
     }
