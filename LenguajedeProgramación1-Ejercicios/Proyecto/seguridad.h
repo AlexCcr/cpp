@@ -1,1 +1,2 @@
 void login ();
+void cambiarLogin();
