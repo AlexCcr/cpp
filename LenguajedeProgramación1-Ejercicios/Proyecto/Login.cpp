@@ -8,7 +8,7 @@
 
 using namespace std;
 
-
+extern int cl;
 
 void login ()
 {
@@ -45,7 +45,7 @@ void login ()
 				cout << "\t\t\t*********************\n";
 				system ("pause");
 				menu();
-				c = 5;
+				c = cl;
 			}
 			else
 			{
@@ -66,6 +66,7 @@ void login ()
 				if(opcion == 1)
 				{
 					cambiarLogin ();
+					c = 5;
 				}
 			}	
 	}

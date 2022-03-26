@@ -18,6 +18,7 @@ string clave;
 
 void cambiarLogin ()
 {
+    system("cls");
     //Leer la clave y contraseña
     ifstream archivo ("documento.txt");
 	getline(archivo, usuario);
