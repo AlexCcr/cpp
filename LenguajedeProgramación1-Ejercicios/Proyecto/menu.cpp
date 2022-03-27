@@ -44,8 +44,9 @@ void menu ()
                 break;
             }
             else
-            cl = 5;
-            cout << "digito incorrecto, el programa se cerrara"<<endl;
+            cout << "digito incorrecto."<<endl;
+            system("pause");
+            menu();
             break;
         }
         if (opcion ==3)

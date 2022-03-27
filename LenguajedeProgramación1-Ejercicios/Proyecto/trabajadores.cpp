@@ -74,9 +74,8 @@ void trabajadores()
     }
     if(opcion == 0)
     {
-        
         menu();
     }
-        trabajadores();
+    trabajadores();
 }
 
