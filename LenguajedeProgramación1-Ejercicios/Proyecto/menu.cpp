@@ -1,6 +1,6 @@
 #include <iostream>
 #include "menu.h"
-
+#include "seguridad.h"
 using namespace std;
 
 int cl = 0;
@@ -33,6 +33,7 @@ void menu ()
             {
                 cl = 0;
                 system("cls");
+                login();
                 break;
             }
             if (valor ==2)
@@ -49,6 +50,17 @@ void menu ()
         {
             trabajadores();
         }
-        // funcion de los menus productos(opcion);
+        if (opcion == 1)
+        {
+            //planillas();
+        }
+        if (opcion == 2)
+        {
+            parametros();
+        }
+        else
+        {
+            
+        }
     }
 }

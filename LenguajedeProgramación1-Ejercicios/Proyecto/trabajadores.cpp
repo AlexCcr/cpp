@@ -9,32 +9,36 @@ void trabajadores()
 {   
                     //Variables
     system("cls");
-    string id, nombre, cargo;
+    string id, nombreCompleto, cargo, texto;
     string datosGuardados;
     string id2;
     string primerNombre, segundoNombre, primerApellido, segundoApellido;
-    string nombreCompleto;
+    string nombreCompletomd;
     string cargo2;
     int opcion;
 
-                    //leer los datos guardados
+                    //leer los datos guardados//std::cin.ignore();
     ifstream archivo3 ("trabajadores.txt");
-	getline(archivo3, id);
-	getline(archivo3, nombre);
-    getline(archivo3, cargo);
-	archivo3.close();
-    //std::cin.ignore();
-    
-                    //Muestra los datos como tabla
-    cout << "Lista de trabajadores:"<<endl;
-    cout << "*********************"<<endl;
-    cout << "  ID  \t\t  |   NOMBRE COMPLETO \t\t\t  |     Cargo"<<endl;
-    cout << id + " | " + nombre + " | " + cargo <<endl;
-    cout << "Fin de linea___________________________________"<<endl;
+    cout << "\t\t\tLista de trabajadores:"<<endl;
+    cout << "\t\t\t*********************"<<endl;
+    cout << "ID | NOMBRE COMPLETO \t\t\t\t\t\t| Cargo"<<endl;
+	while (getline(archivo3, id))
+	{			
+			while(getline(archivo3, nombreCompleto))
+			{
+				while(getline(archivo3, cargo))
+				{
+					cout << id + " | " + nombreCompleto + " \t\t\t\t| " + cargo<<endl;
+					texto = texto + id + "\n" + nombreCompleto + "\n" + cargo + "\n";
+					break;
+				}
+				break;
+			}
+      }
+        cout << "Fin de linea___________________________________"<<endl <<endl;
 
-                    //almacenarlos temporalmente (backup)
-    datosGuardados = id + "\n" + nombre + "\n" + cargo + "\n";
-    
+                    //almacenarlos temporalmente (backup) en la variable texto.
+
                     // modificar los datos guardados
     cout << "1 -- Agregar nuevo trabajador\n";
     cout << "0 -- Atras\n";    
@@ -43,8 +47,8 @@ void trabajadores()
     if (opcion == 1)
     {
         system("cls");
-        cout << "*\n\n\t\t\tFORMULARIO PARA NUEVO EMPLEADO*\n*";
-        cout << "\t\t\tIngrese el ID: \t\t\t";
+        cout << "\n\n\t\t\tFORMULARIO PARA NUEVO EMPLEADO\n";
+        cout << "\t\t\tIngrese el ID: \t\t\t\t";
         cin >> id2;
         cout << "\t\t\tIngrese el primer nombre: \t\t";
         cin >> primerNombre;
@@ -58,9 +62,9 @@ void trabajadores()
         cin >> cargo2;
         cout << "******************************************";
 
-        nombreCompleto = primerNombre + " " + segundoNombre + " " + primerApellido + " " + segundoApellido;
+        nombreCompletomd = primerNombre + " " + segundoNombre + " " + primerApellido + " " + segundoApellido;
         ofstream archivo4 ("trabajadores.txt");
-        archivo4 << datosGuardados + id2 + "\n" + nombreCompleto + "\n" + cargo2;
+        archivo4 << texto + id2 + "\n" + nombreCompletomd + "\n" + cargo2;
         archivo4.close();
         system("cls");
         
@@ -71,5 +75,5 @@ void trabajadores()
         menu();
     }
         trabajadores();
-    }
+}
 
