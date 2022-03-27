@@ -67,7 +67,10 @@ void trabajadores()
         archivo4 << texto + id2 + "\n" + nombreCompletomd + "\n" + cargo2;
         archivo4.close();
         system("cls");
-        
+        cout << "\n\n\t\t\tEMPLEADO AGREGADO CORRECTAMENTE!!!\n";
+        cout <<endl << " " <<endl;
+        system("pause");
+        system("cls");
     }
     if(opcion == 0)
     {

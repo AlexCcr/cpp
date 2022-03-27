@@ -39,6 +39,8 @@ void menu ()
             if (valor ==2)
             {
                 cl = 5;
+                system("cls");
+                login();
                 break;
             }
             else

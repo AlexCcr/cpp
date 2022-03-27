@@ -24,7 +24,7 @@ void login ()
 
 	string user;
 	string pass;
-	int c = 0;
+	int c = cl;
 	int opcion = 0;
 	while (c<3)
 	{
@@ -70,5 +70,6 @@ void login ()
 				}
 			}	
 	}
+	exit(1);
 }
 
