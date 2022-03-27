@@ -9,13 +9,13 @@ void trabajadores()
 {   
                     //Variables
     system("cls");
-    string id, nombreCompleto, cargo, texto;
+    string id, nombreCompleto, cargo, texto, texto2;
     string datosGuardados;
     string id2;
     string primerNombre, segundoNombre, primerApellido, segundoApellido;
     string nombreCompletomd;
     string cargo2;
-    int opcion;
+    int opcion, id_e, contador = 0;
 
                     //leer los datos guardados//std::cin.ignore();
     ifstream archivo3 ("trabajadores.txt");
@@ -41,6 +41,7 @@ void trabajadores()
 
                     // modificar los datos guardados
     cout << "1 -- Agregar nuevo trabajador\n";
+    cout << "2 -- Eliminar trabajador\n";
     cout << "0 -- Atras\n";    
     cin >> opcion;
     
@@ -68,6 +69,44 @@ void trabajadores()
         archivo4.close();
         system("cls");
         cout << "\n\n\t\t\tEMPLEADO AGREGADO CORRECTAMENTE!!!\n";
+        cout <<endl << " " <<endl;
+        system("pause");
+        system("cls");
+    }
+    if (opcion == 2)
+    {
+        system("cls");
+        cout << "\n\n\t\t\tFORMULARIO PARA BORRAR EMPLEADO\n";
+        cout << "\t\t\tIngrese el ID del empleado a borrar: \t\t\t\t";
+        cin >> id_e;
+        cout << "******************************************";
+        ifstream modificar ("trabajadores.txt");
+        while (getline(modificar, id))
+	{			
+			while(getline(modificar, nombreCompleto))
+			{
+				while(getline(modificar, cargo))
+				{
+                    contador = contador + 1;
+                    if (id_e != contador)
+                    {
+                        texto2 = texto2 + id + "\n" + nombreCompleto + "\n" + cargo + "\n";
+					    break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+					
+				}
+				break;
+			}
+     }
+        ofstream eliminar ("trabajadores.txt");
+        eliminar << texto2;
+        eliminar.close();
+        system("cls");
+        cout << "\n\n\t\t\tEMPLEADO BORRADO CORRECTAMENTE!!!\n";
         cout <<endl << " " <<endl;
         system("pause");
         system("cls");

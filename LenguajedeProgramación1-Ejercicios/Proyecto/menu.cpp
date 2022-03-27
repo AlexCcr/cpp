@@ -55,7 +55,7 @@ void menu ()
         }
         if (opcion == 1)
         {
-            //planillas();
+            planilla();
         }
         if (opcion == 2)
         {
