@@ -8,61 +8,77 @@ using namespace std;
 
 void planilla()
 {
-    system("cls");
-    string id, nombreCompleto, cargo, texto;
-    int opcion, contador = 0, contador2 = 0;
-    int diasTrabajados;
-    ifstream archivo9 ("trabajadores.txt");
-    cout << "\t\t\tLista de trabajadores:"<<endl;
-    cout << "\t\t\t*********************"<<endl;
-    cout << "ID | NOMBRE COMPLETO \t\t\t\t\t\t| Cargo"<<endl;
-	while (getline(archivo9, id))
-	{			
-			while(getline(archivo9, nombreCompleto))
-			{
-				while(getline(archivo9, cargo))
-				{
-
-					cout << id + " | " + nombreCompleto + " \t\t\t\t| " + cargo<<endl;
-					texto = texto + id + "\n" + nombreCompleto + "\n" + cargo + "\n";
-					break;
-				}
-				break;
-			}
-      }
-        cout << "Fin de linea___________________________________"<<endl <<endl;
-    archivo9.close();
-
-    cout << "Seleccionar empleado (digite el ID):\n";
-    cout << "0 -- Atras\n";
-    cin >> opcion;
-    system("cls");
-    ifstream archivo10 ("trabajadores.txt");
-    while (getline(archivo10, id))
-	{			
-			while(getline(archivo10, nombreCompleto))
-			{
-				while(getline(archivo10, cargo))
-				{
-                    contador = contador + 1;
-                    if (opcion == contador)
-                    {
-                        cout << "Planilla de pago de ID: \n";
-                        cout << "**********************"<<endl;
-                        cout << id + " - "+ nombreCompleto + ":\n";
-                        cout << "Puesto de trabajo: " + cargo + "\n";
-                    }
-					break;
-				}
-				break;
-			}
-     }
-    archivo10.close();
-    cout <<endl <<endl;
-    cout << "Ingrese los dias trabajados: ";
-    cin >> diasTrabajados;
-    cout << "Ingrese las horas trabajadas: ";
-    int horasTrabajadas;
-    cin >> horasTrabajadas;
+    abrirDocumento();
+    int diasTrabajados, horasTrabajadas, horasExtras, horasExtrasDigitadas, tipoHorasExtras, sueldoBase;
+    int deducciones, horasTotales, sueldo, precioHoraExtra, opcion;
     
+    cout <<endl <<endl;
+    cout << "Ingrese el sueldo base: (digite 0 en caso de no tener) ";
+    cin >> sueldoBase;
+    cout << "Ingrese el numero de dias trabajados: ";
+    cin >> diasTrabajados;
+    cout << "Ingrese las horas trabajadas en total (sin incluir horas extras): ";
+    cin >> horasTrabajadas;
+
+    horasTotales = diasTrabajados * 8;
+
+    if(horasTotales != horasTrabajadas && horasTotales << horasTrabajadas )
+    {
+        cout << "El numero de horas trabajadas totales, es inferior al numero de horas laborales totales.\n";
+        cout << "Es correcto? (1 = Si, 0 = No): ";
+        if(opcion == 1)
+        {  
+            if(horasTotales != horasTrabajadas && horasTrabajadas < horasTotales)
+            {
+                deducciones = horasTotales - horasTrabajadas;
+            }     
+        }
+        if(opcion ==0)
+        {
+            planilla();
+            menu();
+        }
+    }
+    else {}
+    if(horasTotales != horasTrabajadas && horasTrabajadas > horasTotales)
+    {
+        cout << "El numero de horas trabajadas totales, es supeior al numero de horas laborales totales.\n";
+        cout << "Revise los datos ingresados.\n";
+        system("pause");
+        planilla();
+        menu();
+    }
+    else {}
+
+    cout << "Ingrese las horas extra trabajadas: (puede ser 0) ";
+    cin >> horasExtrasDigitadas;
+    if(horasExtrasDigitadas > 0)
+    {
+        cout << "Digite el tipo de horas extra: \n";
+        cout << "1 -- Horas extras diurnas\n";
+        cout << "2 -- Horas extras nocturnas\n";
+        cout << "3 -- Horas extras festivas\n";
+        cin >> tipoHorasExtras;
+    }
+    else{}
+
+    // if precio hora extra
+    if(tipoHorasExtras == 1)
+    {
+        precioHoraExtra = (200 * 0.25) + 200;
+    }
+    else if(tipoHorasExtras == 2)
+    {
+        precioHoraExtra = (200 * 0.5) + 200;
+    }
+    else if(tipoHorasExtras == 3)
+    {
+        precioHoraExtra = (200 * 0.75) + 200;
+    }
+
+    //Calculo del salario
+    horasTrabajadas = horasTrabajadas - horasExtras;
+    sueldo = sueldoBase + (horasTrabajadas * 200) + (horasExtras * precioHoraExtra);
+    cout << "El sueldo: " << sueldo << endl;
+
 }
