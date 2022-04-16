@@ -19,9 +19,6 @@ void parametros()
   
     system("cls");
     ifstream archivo16("parametros.txt");
-    cout << "\t\t\tParametros actuales:"<<endl;
-    cout << "\t\t\t*********************"<<endl;
-
     	while (getline(archivo16, precioHora))
 	    {			
 			while(getline(archivo16, rap))
@@ -41,7 +38,6 @@ void parametros()
 			}
 		break;
 		}
-    cout << "Fin de linea___________________________________"<<endl <<endl;
     archivo16.close();
 
     cout << "\n\n\n Desea modificar los parametros?\n\n";

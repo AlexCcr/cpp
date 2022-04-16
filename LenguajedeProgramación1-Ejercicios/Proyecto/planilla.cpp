@@ -6,12 +6,23 @@
 
 using namespace std;
 
+extern float precioHoraFloat;
+extern float rapFloat;
+extern float ihhssFloat;
+extern float ivmFloat;
+extern string nombrepublico;
+extern string cargoPublico;
+
 void planilla()
 {
     abrirDocumento();
-    int diasTrabajados, horasTrabajadas, horasExtras, horasExtrasDigitadas, tipoHorasExtras, sueldoBase;
-    int deducciones, horasTotales, sueldo, precioHoraExtra, opcion;
-    
+    abrirParametros();
+
+    float diasTrabajados, horasExtras, horasExtrasDigitadas, tipoHorasExtras, sueldoBase, sueldoBruto;
+    float deducciones=0, sueldo, precioHoraExtra, descuento, rap;
+    int eleccion, horasTotales, horasTrabajadas;
+
+
     cout <<endl <<endl;
     cout << "Ingrese el sueldo base: (digite 0 en caso de no tener) ";
     cin >> sueldoBase;
@@ -21,35 +32,34 @@ void planilla()
     cin >> horasTrabajadas;
 
     horasTotales = diasTrabajados * 8;
-
-    if(horasTotales != horasTrabajadas && horasTotales << horasTrabajadas )
+    
+    if(horasTotales != horasTrabajadas)
     {
-        cout << "El numero de horas trabajadas totales, es inferior al numero de horas laborales totales.\n";
-        cout << "Es correcto? (1 = Si, 0 = No): ";
-        if(opcion == 1)
-        {  
-            if(horasTotales != horasTrabajadas && horasTrabajadas < horasTotales)
+        if(horasTotales > horasTrabajadas)
+        {
+            cout << "El numero de horas trabajadas totales, es inferior al numero de horas laborales totales.\n";
+            cout << "Es correcto? (1 = Si, 0 = No): ";
+            cin >> eleccion;
+            if(eleccion == 1)
             {
                 deducciones = horasTotales - horasTrabajadas;
-            }     
+            }
+            if(eleccion ==0)
+            {
+                planilla();
+                menu();
+            }
         }
-        if(opcion ==0)
+        if(horasTrabajadas > horasTotales)
         {
+            cout << "El numero de horas trabajadas totales, es superior al numero de horas laborales totales.\n";
+            cout << "Revise los datos ingresados.\n";
+            system("pause");
             planilla();
             menu();
         }
     }
-    else {}
-    if(horasTotales != horasTrabajadas && horasTrabajadas > horasTotales)
-    {
-        cout << "El numero de horas trabajadas totales, es supeior al numero de horas laborales totales.\n";
-        cout << "Revise los datos ingresados.\n";
-        system("pause");
-        planilla();
-        menu();
-    }
-    else {}
-
+     
     cout << "Ingrese las horas extra trabajadas: (puede ser 0) ";
     cin >> horasExtrasDigitadas;
     if(horasExtrasDigitadas > 0)
@@ -65,20 +75,42 @@ void planilla()
     // if precio hora extra
     if(tipoHorasExtras == 1)
     {
-        precioHoraExtra = (200 * 0.25) + 200;
+        precioHoraExtra = (precioHoraFloat * 0.25) + precioHoraFloat;
     }
     else if(tipoHorasExtras == 2)
     {
-        precioHoraExtra = (200 * 0.5) + 200;
+        precioHoraExtra = (precioHoraFloat * 0.5) + precioHoraFloat;
     }
     else if(tipoHorasExtras == 3)
     {
-        precioHoraExtra = (200 * 0.75) + 200;
+        precioHoraExtra = (precioHoraFloat * 0.75) + precioHoraFloat;
     }
+    else{}
+    
+    
 
     //Calculo del salario
-    horasTrabajadas = horasTrabajadas - horasExtras;
-    sueldo = sueldoBase + (horasTrabajadas * 200) + (horasExtras * precioHoraExtra);
-    cout << "El sueldo: " << sueldo << endl;
+    sueldoBruto = sueldoBase + (precioHoraFloat * horasTrabajadas) + (precioHoraExtra * horasExtrasDigitadas);
+    rap = sueldoBruto * rapFloat;
+    descuento = (rap + ihhssFloat + ivmFloat+(deducciones*precioHoraFloat));
+    sueldo = sueldoBruto - descuento;
+    //Imprimir
+    system("cls");
+    cout << "EMPRESA SA. DE CV.\n";
+    cout << "RUC: 2055-099-9\n";
+    cout << "NOMBRE DEL EMPLEDO: " << nombrepublico << "\t\tCARGO "<< cargoPublico << endl << endl << endl;
+    cout << "Concepto \t\t\t\t\tmonto\t\t\t deducciones\n";
+    cout << "Salario Bruto \t\t\t\t\t" << sueldoBruto << endl;
+    cout << "Salario Base \t\t\t\t\t" << sueldoBase << endl;
+    cout << diasTrabajados << " dias \t\t\t\t\t\t" << ((precioHoraFloat * horasTrabajadas)) << endl;
+    cout << horasExtrasDigitadas << " horas extra \t\t\t\t\t" << (precioHoraExtra * horasExtrasDigitadas) << endl;
+    cout << "*******************************************************************************" << endl;
+    cout << "Descuentos \t\t\t\t" << "\t\t\t\t" <<descuento << endl;
+    cout <<"-"<< deducciones << " horas \t\t\t\t\t\t\t\t" << ((precioHoraFloat * deducciones)) << endl;
+    cout << "RAP \t\t\t\t" << "\t\t\t\t\t" <<rap << endl;
+    cout << "IHSS \t\t\t\t" << "\t\t\t\t\t" <<ihhssFloat << endl;
+    cout << "IVM \t\t\t\t" << "\t\t\t\t\t" <<ivmFloat << endl;
+    cout << "Salario Neto \t\t\t\t\t" << sueldo << " Lempiras." << endl;
+    system("pause");
 
 }

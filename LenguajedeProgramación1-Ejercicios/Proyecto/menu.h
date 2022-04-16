@@ -4,3 +4,4 @@ void parametros();
 void planilla();
 void fechas();
 void abrirDocumento();
+void abrirParametros();

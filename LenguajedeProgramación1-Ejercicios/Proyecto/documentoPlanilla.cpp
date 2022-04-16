@@ -5,6 +5,8 @@
 #include "menu.h"
 
 using namespace std;
+string nombrepublico;
+string cargoPublico;
 
 void abrirDocumento()
 {
@@ -59,6 +61,8 @@ void abrirDocumento()
                         fechas();
                         cout << id + " - "+ nombreCompleto + ":\n";
                         cout << "Puesto de trabajo: " + cargo + "\n";
+                        nombrepublico = nombreCompleto;
+                        cargoPublico = cargo;
                     }
 					break;
 				}

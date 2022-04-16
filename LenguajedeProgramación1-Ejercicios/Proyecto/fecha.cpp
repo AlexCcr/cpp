@@ -24,12 +24,13 @@ void fechas()
         system("cls");
         cout << "\t\t\tPlanilla de pago de ID: \n";
         cout << "\t\t\t**********************"<<endl;
-        cout << "Fecha actual: " << dia << letra << mes << letra <<anio <<endl;
+        cout << "Fecha de ingreso: " << dia << letra << mes << letra <<anio <<endl;
     }
     else
     {
-        cout << "Incorrecto el formato: DD/MM/AAAA";
+        cout << "Incorrecto el formato: DD/MM/AAAA\n";
+        system("pause");
+        system("cls");
+        fechas();
     }
-    //system("pause>null");
-
 }
