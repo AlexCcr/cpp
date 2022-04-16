@@ -51,16 +51,16 @@ void parametros()
         cout << "\n\n\t\t\tNUEVOS PARAMETROS\n";
         cout << "\t\t\tIngrese el precio por hora: \t\t";
         cin >> precioHora;
-        cout << "\t\t\tIngrese el RAP: \t\t\t\t";
+        cout << "\t\t\tIngrese el RAP: \t\t\t";
         cin >> rap;
         cout << "\t\t\tIngrese el IHSS/IVM: \t\t\t";
         cin >> ihhss;
-        cout << "\t\t\tIngrese el maternidad: \t\t\t\t";
+        cout << "\t\t\tIngrese el maternidad: \t\t\t";
         cin >> ivm;
         cout << "\n\n\t\t\tParametros actualizados:\n";
         cout << "\t\t\t************************\n";
         ofstream mod ("parametros.txt");
-        mod << texto2;
+        mod << precioHora << "\n" << rap << "\n" << ihhss << "\n" << ivm << "\n";
         mod.close();
     }
     else
