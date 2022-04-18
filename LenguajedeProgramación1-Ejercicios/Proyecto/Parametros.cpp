@@ -11,6 +11,7 @@ void parametros()
 {   
     string precioHora;
     string rap;
+    float rapFloat;
     string ihhss;
     string ivm;
     string texto;
@@ -23,12 +24,18 @@ void parametros()
 	    {			
 			while(getline(archivo16, rap))
 			{
+                float porcentaje = stof(rap);
+                rapFloat = porcentaje*100;
+                rap = to_string(rapFloat);
 				while(getline(archivo16, ihhss))
 				{
 
 					while(getline(archivo16, ivm))
                     {
-                        cout << "Precio por hora: " + precioHora + ".00 Lempiras" + " | " + "RAP: " + rap + " x 100% (Porciento)" + "  | " + "IHSS/IVM: " + ihhss + ".00 Lempiras" + " | " + "Maternidad: " + ivm + ".00 Lempiras" <<endl;
+                        cout << "Precio por hora: " << precioHora << " Lempiras"<< endl;
+                        cout << "Rap: " << rapFloat << "% Porcentaje"<< endl;
+                        cout << "Ihhss: "<< ihhss << ".00 Lempiras"<< endl;
+                        cout << "Ivm: " << ivm << ".00 Lempiras"<< endl;
 					    texto = texto + precioHora + "\n" + rap + "\n" + ihhss + "\n" + ivm + "\n";
                         break;
                     }
@@ -51,14 +58,15 @@ void parametros()
         cout << "\n\n\t\t\tNUEVOS PARAMETROS\n";
         cout << "\t\t\tIngrese el precio por hora: \t\t";
         cin >> precioHora;
-        cout << "\t\t\tIngrese el RAP: \t\t\t";
-        cin >> rap;
+        cout << "\t\t\tIngrese el RAP (porcentaje, sin incluir %): \t\t\t";
+        cin >> rapFloat;
         cout << "\t\t\tIngrese el IHSS/IVM: \t\t\t";
         cin >> ihhss;
         cout << "\t\t\tIngrese el maternidad: \t\t\t";
         cin >> ivm;
         cout << "\n\n\t\t\tParametros actualizados:\n";
         cout << "\t\t\t************************\n";
+        rap = to_string(rapFloat/100);
         ofstream mod ("parametros.txt");
         mod << precioHora << "\n" << rap << "\n" << ihhss << "\n" << ivm << "\n";
         mod.close();
