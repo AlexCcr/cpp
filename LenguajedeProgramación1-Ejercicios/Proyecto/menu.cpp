@@ -1,13 +1,12 @@
 #include <iostream>
 #include "menu.h"
 #include "seguridad.h"
-using namespace std;
 
+using namespace std;
 int cl = 0;
 
 void menu ()
 {
-
     int opcion = 0;
 
     while (true)
@@ -16,14 +15,12 @@ void menu ()
         cout << "\t\t\t********\n";
         cout << "\t\t\t  MENU  \n";
         cout << "\t\t\t********\n\n\n";
-
         cout << "1 -- Planillas"<<endl;
         cout << "2 -- Cambiar parametros"<<endl;
         cout << "3 -- Trabajadores" << endl;
         cout << "0 -- Salir" << endl;
         cout << "Seleccione una opcion: ";
         cin >> opcion;
-
         if (opcion == 0)
         {   
             int valor;
@@ -62,8 +59,6 @@ void menu ()
             parametros();
         }
         else
-        {
-            
-        }
+        {}
     }
 }

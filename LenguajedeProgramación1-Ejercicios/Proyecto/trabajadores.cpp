@@ -17,7 +17,7 @@ void trabajadores()
     string cargo2;
     int opcion, id_e, contador = 0;
 
-                    //leer los datos guardados//std::cin.ignore();
+                     //leer los datos guardados
     ifstream archivo3 ("trabajadores.txt");
     cout << "\t\t\tLista de trabajadores:"<<endl;
     cout << "\t\t\t*********************"<<endl;
@@ -35,11 +35,7 @@ void trabajadores()
 				break;
 			}
       }
-        cout << "Fin de linea___________________________________"<<endl <<endl;
-
-                    //almacenarlos temporalmente (backup) en la variable texto.
-
-                    // modificar los datos guardados
+    cout << "Fin de linea___________________________________"<<endl <<endl;
     cout << "1 -- Agregar nuevo trabajador\n";
     cout << "2 -- Eliminar trabajador\n";
     cout << "0 -- Atras\n";    
@@ -57,7 +53,7 @@ void trabajadores()
         cin >> segundoNombre;
         cout << "\t\t\tIngrese el primer apellido: \t\t";
         cin >> primerApellido;
-        cout << "\t\t\tIngrese el primer segundo: \t\t";
+        cout << "\t\t\tIngrese el segundo apellido: \t\t";
         cin >> segundoApellido;
         cout << "\t\t\tIngrese el cargo: \t\t\t";
         cin >> cargo2;
