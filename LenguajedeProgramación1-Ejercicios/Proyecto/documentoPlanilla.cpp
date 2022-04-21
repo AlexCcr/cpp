@@ -56,10 +56,10 @@ void abrirDocumento()
                     if (opcion == contador)
                     {
                         system("cls");
-                        cout << "\t\t\tPlanilla de pago de ID: \n";
-                        cout << "\t\t\t**********************"<<endl;
+                        cout << "\t\t\tPlanilla de pago \n";
+                        cout << "\t\t\t****************"<<endl;
                         fechas();
-                        cout << id + " - "+ nombreCompleto + ":\n";
+                        cout <<"ID: " + id + " - "+ nombreCompleto + ":\n";
                         cout << "Puesto de trabajo: " + cargo + "\n";
                         nombrepublico = nombreCompleto;
                         cargoPublico = cargo;

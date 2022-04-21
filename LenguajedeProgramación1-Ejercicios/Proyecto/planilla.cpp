@@ -23,7 +23,12 @@ void planilla()
     float deducciones=0, sueldo, precioHoraExtra, descuento, rap;
     int eleccion, horasTotales, horasTrabajadas;
 
-
+    cout << "\n\n\t\t\tParametros actuales\n";
+    cout << "\t\t\t*******************\n";
+    cout << "Precio por hora: " << precioHoraFloat << " Lempiras"<< endl;
+    cout << "RAP: " << rapFloat*100 << "% Porcentaje"<< endl;
+    cout << "IHSS: "<< ihhssFloat << ".00 Lempiras"<< endl;
+    cout << "IVM: " << ivmFloat << ".00 Lempiras"<< endl;
     cout <<endl <<endl;
     cout << "Ingrese el sueldo base: (digite 0 en caso de no tener) ";
     cin >> sueldoBase;

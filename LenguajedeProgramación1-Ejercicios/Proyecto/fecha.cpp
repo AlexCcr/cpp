@@ -24,7 +24,7 @@ void fechas()
         system("cls");
         cout << "\t\t\tPlanilla de pago de ID: \n";
         cout << "\t\t\t**********************"<<endl;
-        cout << "Fecha de ingreso: " << dia << letra << mes << letra <<anio <<endl;
+        cout << "Fecha de ingreso: " << dia << letra << mes << letra <<anio <<endl<<endl;
     }
     else
     {
