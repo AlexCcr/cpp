@@ -38,7 +38,6 @@ void login ()
 
 		
 			if(usuario == user && clave == pass)
-			//if(strcmp(pass, clave) == 0 && strcmp(user, usuario)==0)
 			{
 				system("cls");
 				cout << "\t\t\tBienvenido al sistema\n";
@@ -53,7 +52,7 @@ void login ()
 				cout <<"\n\n\n**********************************************"<<endl;
 				cout <<"Usuario o clave incorrecta "<< "intento: " << c << "/3" << endl;
 				cout <<"**********************************************"<<endl;
-				cout << "Pulse 1 para cambiar las credenciales. (pulse otra tecla para volver a intentarlo) ";
+				cout << "Pulse 1 para cambiar las credenciales. (pulse otra digito para volver a intentarlo) ";
 				cin >> opcion;
 
 				if (c == 3 && opcion != 1)

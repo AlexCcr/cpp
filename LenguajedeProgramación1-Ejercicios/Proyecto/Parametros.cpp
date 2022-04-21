@@ -32,6 +32,8 @@ void parametros()
 
 					while(getline(archivo16, ivm))
                     {
+                        cout << "\t\t\tParametros actuales:\n";
+                        cout << "\t\t\t********************\n";
                         cout << "Precio por hora: " << precioHora << " Lempiras"<< endl;
                         cout << "Rap: " << rapFloat << "% Porcentaje"<< endl;
                         cout << "Ihhss: "<< ihhss << ".00 Lempiras"<< endl;

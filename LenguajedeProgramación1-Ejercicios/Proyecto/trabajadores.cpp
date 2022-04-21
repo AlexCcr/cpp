@@ -49,7 +49,7 @@ void trabajadores()
     {
         system("cls");
         cout << "\n\n\t\t\tFORMULARIO PARA NUEVO EMPLEADO\n";
-        cout << "\t\t\tIngrese el ID: \t\t\t\t";
+        cout << "\t\t\tIngrese el ID (ultimo ID registrado:"<<id <<"): \t\t\t\t";
         cin >> id2;
         cout << "\t\t\tIngrese el primer nombre: \t\t";
         cin >> primerNombre;

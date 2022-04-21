@@ -66,9 +66,9 @@ void planilla()
     if(horasExtrasDigitadas > 0)
     {
         cout << "\nDigite el tipo de horas extra: \n";
-        cout << "1 -- Horas extras diurnas\n";
-        cout << "2 -- Horas extras nocturnas\n";
-        cout << "3 -- Horas extras festivas\n";
+        cout << "1 -- Horas extras diurnas (25%)\n";
+        cout << "2 -- Horas extras nocturnas(50%)\n";
+        cout << "3 -- Horas extras festivas(75%)\n";
         cout << "...  ";
         cin >> tipoHorasExtras;
     }
