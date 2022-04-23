@@ -34,10 +34,10 @@ void parametros()
                     {
                         cout << "\t\t\tParametros actuales:\n";
                         cout << "\t\t\t********************\n";
-                        cout << "Precio por hora: " << precioHora << " Lempiras"<< endl;
-                        cout << "Rap: " << rapFloat << "% Porcentaje"<< endl;
-                        cout << "Ihhss: "<< ihhss << ".00 Lempiras"<< endl;
-                        cout << "Ivm: " << ivm << ".00 Lempiras"<< endl;
+                        cout << "Precio por hora: \t\t" << precioHora << " Lempiras"<< endl;
+                        cout << "RAP: \t\t\t\t" << rapFloat << "% (Porcentaje)"<< endl;
+                        cout << "IHSS: \t\t\t\t"<< ihhss << ".00 Lempiras"<< endl;
+                        cout << "IVM: \t\t\t\t" << ivm << ".00 Lempiras"<< endl;
 					    texto = texto + precioHora + "\n" + rap + "\n" + ihhss + "\n" + ivm + "\n";
                         break;
                     }

@@ -10,8 +10,7 @@ void trabajadores()
                     //Variables
     system("cls");
     string id, nombreCompleto, cargo, texto, texto2;
-    string datosGuardados;
-    string id2;
+    string datosGuardados, id2, reg;
     string primerNombre, segundoNombre, primerApellido, segundoApellido;
     string nombreCompletomd;
     string cargo2;
@@ -30,6 +29,7 @@ void trabajadores()
 				{
 					cout << id + " | " + nombreCompleto + " \t\t\t\t| " + cargo<<endl;
 					texto = texto + id + "\n" + nombreCompleto + "\n" + cargo + "\n";
+                    reg = id;
 					break;
 				}
 				break;
@@ -45,8 +45,17 @@ void trabajadores()
     {
         system("cls");
         cout << "\n\n\t\t\tFORMULARIO PARA NUEVO EMPLEADO\n";
-        cout << "\t\t\tIngrese el ID (ultimo ID registrado:"<<id <<"): \t\t\t\t";
+        cout << "Ultimo ID registrado: ";
+        cout << reg << endl;
+        cout << "\t\t\tIngrese el ID: \t\t\t\t";
         cin >> id2;
+        int i = stof(reg);
+        int j = stof(id2);
+        while(id2 <= reg)
+        {
+            cout << "\t\t\tEl ID ya existe, ingrese otro ID: \t";
+            cin >> id2;
+        }
         cout << "\t\t\tIngrese el primer nombre: \t\t";
         cin >> primerNombre;
         cout << "\t\t\tIngrese el segundo nombre: \t\t";

@@ -132,5 +132,4 @@ void planilla()
     cout << "Salario Neto \t\t\t\t\t" << sueldo << " Lempiras." << endl;
     SetConsoleTextAttribute(hConsole, 7);
     system("pause");
-
 }

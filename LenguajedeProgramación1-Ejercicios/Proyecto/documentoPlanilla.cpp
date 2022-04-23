@@ -60,7 +60,7 @@ void abrirDocumento()
                         cout << "\t\t\t****************"<<endl;
                         fechas();
                         cout <<"ID: " + id + " - "+ nombreCompleto + ":\n";
-                        cout << "Puesto de trabajo: " + cargo + "\n";
+                        cout << "Puesto: " + cargo + "\n";
                         nombrepublico = nombreCompleto;
                         cargoPublico = cargo;
                     }
