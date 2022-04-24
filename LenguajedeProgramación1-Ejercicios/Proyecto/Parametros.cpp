@@ -64,7 +64,7 @@ void parametros()
         cin >> rapFloat;
         cout << "\t\t\tIngrese el IHSS/IVM: \t\t\t";
         cin >> ihhss;
-        cout << "\t\t\tIngrese el maternidad: \t\t\t";
+        cout << "\t\t\tIngrese el IVM: \t\t\t";
         cin >> ivm;
         cout << "\n\n\t\t\tParametros actualizados:\n";
         cout << "\t\t\t************************\n";
