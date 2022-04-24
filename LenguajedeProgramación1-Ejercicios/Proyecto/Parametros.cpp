@@ -58,13 +58,13 @@ void parametros()
         MessageBox(NULL, "Se eliminaran todos los datos","Advertencia", MB_OK);
         system("cls");
         cout << "\n\n\t\t\tNUEVOS PARAMETROS\n";
-        cout << "\t\t\tIngrese el precio por hora: \t\t";
+        cout << "\t\t\tIngrese el precio por hora: \t\t\t";
         cin >> precioHora;
-        cout << "\t\t\tIngrese el RAP (porcentaje, sin incluir %): \t\t\t";
+        cout << "\t\t\tIngrese el RAP (porcentaje, sin incluir %): \t";
         cin >> rapFloat;
-        cout << "\t\t\tIngrese el IHSS/IVM: \t\t\t";
+        cout << "\t\t\tIngrese el IHSS/IVM: \t\t\t\t";
         cin >> ihhss;
-        cout << "\t\t\tIngrese el IVM: \t\t\t";
+        cout << "\t\t\tIngrese el IVM: \t\t\t\t";
         cin >> ivm;
         cout << "\n\n\t\t\tParametros actualizados:\n";
         cout << "\t\t\t************************\n";
