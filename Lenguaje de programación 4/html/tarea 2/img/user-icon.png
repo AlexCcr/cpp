@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>User Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Homepage" transform="translate(-1169.000000, -45.000000)" stroke="#FFFFFF" stroke-width="1.5">
+            <g id="Header-3">
+                <g id="Menu" transform="translate(24.000000, 28.000000)">
+                    <g id="Account" transform="translate(1146.000000, 13.000000)">
+                        <g id="User-Icon" transform="translate(0.000000, 5.000000)">
+                            <path d="M19.1523188,18.5566708 C19.2565522,15.3218551 16.9837153,13.7044472 12.3338081,13.7044472 C7.68390084,13.7044472 5.37408214,15.3218551 5.40435197,18.5566708" id="Path"></path>
+                            <circle id="Oval" cx="12.2348157" cy="8.23481573" r="3.23481573"></circle>
+                            <circle id="Oval-Copy-7" cx="12.2348157" cy="12.2348157" r="12.2348157"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

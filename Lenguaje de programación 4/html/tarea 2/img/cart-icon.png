@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Cart Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-1334.000000, -47.000000)" stroke="#FFFFFF" stroke-width="1.5">
+            <g id="Header-3">
+                <g id="Menu" transform="translate(24.000000, 28.000000)">
+                    <g id="Icon-w/No." transform="translate(1295.000000, 4.000000)">
+                        <g id="Cart-Icon" transform="translate(16.000000, 16.000000)">
+                            <path d="M8,22 C9.10477742,22 10,21.1043593 10,20 C10,18.8956407 9.10477742,18 8,18 C6.89522258,18 6,18.8956407 6,20 C6,21.1043593 6.89522258,22 8,22 L8,22 Z" id="Stroke-224"></path>
+                            <path d="M17,22 C18.1047774,22 19,21.1043593 19,20 C19,18.8956407 18.1047774,18 17,18 C15.8952226,18 15,18.8956407 15,20 C15,21.1043593 15.8952226,22 17,22 L17,22 Z" id="Stroke-226"></path>
+                            <path d="M3.38477238,2 L16.1958634,2 L22.6149631,2 C22.8967062,2 23.0611921,2.04052632 22.9786778,2.32131579 L21.2226068,8.35394142 L20.0477891,12.3897895 C19.9669033,12.6653684 19.7459602,13 19.5527029,13 L6.44703259,13 C6.25431811,13 6.03446075,12.5814211 5.95194638,12.3006316 L3.02105772,2.42089474 C2.93962907,2.14531579 3.10140066,2 3.38477238,2 L3.38477238,2 Z" id="Stroke-228"></path>
+                            <path d="M3,2 L2,0" id="Stroke-230" stroke-linecap="round"></path>
+                            <path d="M7,13 C6.81541802,13 6.60423453,13.225458 6.52497286,13.514326 L5.54821688,17.0570497" id="Stroke-232" stroke-linecap="round"></path>
+                            <path d="M0,0 L2,0" id="Stroke-234" stroke-linecap="round"></path>
+                            <path d="M5.60321363,17 L20,17" id="Stroke-236" stroke-linecap="round"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
